@@ -1,0 +1,23 @@
+<header>
+    <div class=" title">
+        <h2> Welcome {{title}} </h2>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a [routerLink]="['home']">Home</a>
+        </li>
+        <li>
+            <a [routerLink]="['intro']">Intro</a>
+        </li>
+        <li>
+            <a [routerLink]="['var']">Var</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer>&copy; &hearts; &reg; 2023</footer>
+
