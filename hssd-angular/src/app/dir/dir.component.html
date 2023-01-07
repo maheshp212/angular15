@@ -1,0 +1,90 @@
+<p>dir works!</p>
+<!-- *ngIf
+*ngFor
+[hidden]
+[ngSwitch]
+*ngSwitchCase
+*ngSwitchDefault
+[ngStyle]
+[ngClass]
+
+[(ngModel)]
+
+(click)
+(focus)
+
+
+[mahesh] - ng g  d mahesh for custom directives
+
+* - conditions & loops
+[] - attributes
+() - events
+[()] - two way data binding
+# -- template varibales -->
+
+<p *ngIf="fname === 'hssd'"> this is if </p>
+<p [hidden]="fname === 'hssd'"> this is Hidden </p>
+
+<!-- fruits:string[] = ['kiwi', 'melon', 'berry']; -->
+<!-- let arrValue of array -->
+<!-- ngFor works only on arrays -->
+<p *ngFor="let item of fruits">{{item}}</p>
+
+<ul>
+    <li *ngFor="let item of fruits">
+        {{item}}
+    </li>
+</ul>
+<select>
+    <option *ngFor="let x of fruits">{{x}}</option>
+</select>
+
+<table border="1">
+    <tr *ngFor="let x of fruits">
+        <td > {{x}}</td>
+    </tr>
+</table>
+
+<p [ngSwitch]="fname">
+    <span *ngSwitchCase="'hssd'"> this is hssd</span>
+    <span *ngSwitchCase="'angular'"> this is angular</span>
+    <span *ngSwitchCase="'ts'"> this is ts</span>
+    <span *ngSwitchDefault> this is default</span>
+</p>
+
+<div [ngClass]="{'success': fname == 'hssd', 'error': fname != 'hssd'}"> this is ng class div</div>
+<div [ngStyle]="{'background-color' : (fname == 'hssd') ?'skyblue' : 'orange'}"> this is ng Style div</div>
+
+
+<input type="text" placeholder="type something" [(ngModel)]="fname">
+
+
+<div (click)="callMe()"> this is click</div>
+<blockquote (dblclick)="callMe()"> this is dblclick</blockquote>
+<span (mouseover)="callMe()"> this is over</span>
+<marquee (mouseout)="callMe()"> this is out</marquee>
+<div (mouseenter)="callMe()"> this is eneter</div>
+<h1 (mouseleave)="callMe()"> this is leave</h1>
+<h2 (mousedown)="callMe()"> this is down</h2>
+<h3 (mouseup)="callMe()"> this is up</h3>
+<h4 (mousemove)="callMe()"> this is move</h4>
+
+<pre>
+    <input type="text" [(ngModel)]="fname" (click)="callMe()" placeholder="click" >
+
+    <input type="text" [(ngModel)]="fname" (focus)="callMe()" placeholder="focus" >
+    
+    <input type="text" [(ngModel)]="fname" (blur)="callMe()" placeholder="blur" >
+    
+    <input type="text" [(ngModel)]="fname" (change)="callMe()" placeholder="change" >
+    
+    <input type="text" [(ngModel)]="fname" (keypress)="callMe()" placeholder="press" >
+    
+    <input type="text" [(ngModel)]="fname" (keyup)="callMe()" placeholder="up" >
+    
+    <input type="text" [(ngModel)]="fname" (keydown)="callMe()" placeholder="down" >
+    
+    <input type="text" [(ngModel)]="fname" (input)="callMe()" placeholder="input" >
+    
+
+</pre>

@@ -1,0 +1,59 @@
+<p>obj-forms works!</p>
+
+<pre>
+    <form name="form" #f=ngForm>
+        <input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5">
+
+        <!-- <div class="error" *ngIf="f.submitted && fname.invalid">Please enter a correct value</div> -->
+        <!-- <div class="error" *ngIf="fname.dirty && fname.invalid">Please enter a correct value</div> -->
+        <!-- <div class="error" *ngIf="fname.touched && fname.invalid">Please enter a correct value</div> -->
+        <div class="error" *ngIf="fname.dirty && fname.hasError('required')">Please enter a value</div>
+        <div class="error" *ngIf="fname.dirty && fname.hasError('minlength')">Please enter min 5 characters</div>
+        
+        <input type="number" name="age" [(ngModel)]="user.age"  #age=ngModel  min="10" max="55">
+        <div class="error" *ngIf="age.dirty && age.hasError('min')">Please enter a  min 10</div>
+        <div class="error" *ngIf="age.dirty && age.hasError('max')">Please enter max of 55</div>
+        
+        <input type="date" name="today" [(ngModel)]="user.today" #today=ngModel min="2022-11-12" max="2023-03-12">
+        
+        <input type="phone" name="phone" [(ngModel)]="user.phone" #phone=ngModel pattern="[789][0-9]{9}" minlength="10">
+        <div class="error" *ngIf="phone.dirty && !phone.hasError('minlength') && phone.hasError('pattern')">Number should start with 7/8/9</div>
+        <div class="error" *ngIf="phone.dirty && phone.hasError('minlength')">Number should be min 10 digits</div>
+
+        <button>Submit</button>
+    </form>
+
+form validation
+dirty :: {{f.dirty}}
+pristine  :: {{f.pristine}}
+touched  :: {{f.touched}}
+untouched :: {{f.untouched}}
+valid :: {{f.valid}}
+invalid :: {{f.invalid}}
+submitted :: {{f.submitted}}
+
+
+
+field validation
+
+firstname validations
+dirty :: {{fname.dirty}}
+pristine  :: {{fname.pristine}}
+touched  :: {{fname.touched}}
+untouched :: {{fname.untouched}}
+valid :: {{fname.valid}}
+invalid :: {{fname.invalid}}
+required error  :: {{fname.hasError('required')}}
+minlenghth error :: {{fname.hasError('minlength')}}
+
+<!-- age validations 
+dirty :: {{ageNumber.dirty}}
+pristine  :: {{ageNumber.pristine}}
+touched  :: {{ageNumber.touched}}
+untouched :: {{ageNumber.untouched}}
+valid :: {{ageNumber.valid}}
+invalid :: {{ageNumber.invalid}} -->
+
+
+
+</pre>
