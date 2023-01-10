@@ -7,9 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirComponent } from './dir/dir.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -19,12 +20,14 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
     VarComponent,
     DirComponent,
     FormsComponent,
-    ObjFormsComponent
+    ObjFormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [], //services
   bootstrap: [AppComponent]
