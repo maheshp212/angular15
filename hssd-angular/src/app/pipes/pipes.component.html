@@ -1,0 +1,39 @@
+<p>pipes works!</p>
+<pre>
+    {{fname}}
+    {{fname | lowercase}}
+    {{fname | uppercase}}
+    **{{fname | number}}
+    {{fname | slice:2:5}}
+
+
+    {{age}}
+    {{age | number}}
+    {{age | number:'5.5'}}
+    {{age | number:'5.1-2'}}
+    
+    
+    {{num | hexa}}
+    {{num | hssd}}
+
+    {{num | dollarrrrrrrrrrrrrrrrrrr}} 
+    {{num | dollarrrrrrrrrrrrrrrrrrr | currency}} //nested pipes
+    {{num | dollarrrrrrrrrrrrrrrrrrr | currency: '$ '}} //nested pipes
+    
+    {{age | currency}}
+    {{age | currency:'INR'}}
+    {{age | currency:'&#8377; '}}
+    {{age | currency:'Mr '}}
+    {{age | currency:'INR '}}
+
+    {{num | params:3:4:5:8 }} 
+    {{num | params:age:4:5:8 }} 
+
+
+    {{today}}
+    {{today | date}}
+    {{today | date:'dd-MM-yy'}}
+
+    {{user}}
+    {{user | json}}
+</pre>

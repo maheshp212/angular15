@@ -11,6 +11,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { DollarPipe } from './dollar.pipe';
+import { ParamsPipe } from './params.pipe';
+import { HssdPipe } from './pipes/hssd.pipe';
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -21,7 +26,12 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     DirComponent,
     FormsComponent,
     ObjFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    DollarPipe,
+    ParamsPipe,
+    HssdPipe
   ],
   imports: [ //modules
     BrowserModule,
