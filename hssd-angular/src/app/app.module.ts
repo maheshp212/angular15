@@ -16,6 +16,10 @@ import { HexaPipe } from './hexa.pipe';
 import { DollarPipe } from './dollar.pipe';
 import { ParamsPipe } from './params.pipe';
 import { HssdPipe } from './pipes/hssd.pipe';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ApisComponent } from './apis/apis.component';
+import { UsersService } from './users.service';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -31,15 +35,18 @@ import { HssdPipe } from './pipes/hssd.pipe';
     HexaPipe,
     DollarPipe,
     ParamsPipe,
-    HssdPipe
+    HssdPipe,
+    LifeCycleComponent,
+    ApisComponent
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [], //services
+  //providers: [UsersService], //services
   bootstrap: [AppComponent]
 })
 export class AppModule { }
