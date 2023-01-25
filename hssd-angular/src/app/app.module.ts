@@ -19,7 +19,9 @@ import { HssdPipe } from './pipes/hssd.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
 import { UsersService } from './users.service';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { Child1Component } from './child1/child1.component';
+import { Child2Component } from './child2/child2.component'
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -37,7 +39,9 @@ import {HttpClientModule} from '@angular/common/http'
     ParamsPipe,
     HssdPipe,
     LifeCycleComponent,
-    ApisComponent
+    ApisComponent,
+    Child1Component,
+    Child2Component
   ],
   imports: [ //modules
     BrowserModule,

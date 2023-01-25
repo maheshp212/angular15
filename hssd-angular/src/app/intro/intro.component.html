@@ -1,1 +1,10 @@
 <p>intro works!</p>
+
+<app-child1 [name]="'hssd'" [age]="45"></app-child1> <!-- directly passing the values-->
+<app-child1 [name]="name" [age]="age" [gender]="male" [fruits]="fruitsList" [user]="userData"></app-child1> <!-- passing the values by using variables-->
+<app-child1 name="hssd22222222"></app-child1> <!-- genernal atrribute passing-->
+
+
+<app-child2 (sendName)="sendNameHandler($event)"></app-child2>
+
+<img src="" alt="im alt">

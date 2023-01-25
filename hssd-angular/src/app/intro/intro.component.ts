@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class IntroComponent {
 
+  name = "harsha"
+  age = 33
+  male = true;
+  fruitsList = ['kiwi', 'meleon', 'berry'];
+  userData = {tech:'angular', exp: 5}
+
+  sendNameHandler(val:string){
+    console.log('intro compoent send Name Handler')
+    console.log(val);
+    this.name = val;
+  }
 }
