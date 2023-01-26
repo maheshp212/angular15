@@ -21,7 +21,9 @@ import { ApisComponent } from './apis/apis.component';
 import { UsersService } from './users.service';
 import {HttpClientModule} from '@angular/common/http';
 import { Child1Component } from './child1/child1.component';
-import { Child2Component } from './child2/child2.component'
+import { Child2Component } from './child2/child2.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductComponent } from './product/product.component'
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -41,7 +43,9 @@ import { Child2Component } from './child2/child2.component'
     LifeCycleComponent,
     ApisComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    NotfoundComponent,
+    ProductComponent
   ],
   imports: [ //modules
     BrowserModule,
