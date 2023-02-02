@@ -23,7 +23,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { Child1Component } from './child1/child1.component';
 import { Child2Component } from './child2/child2.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { ProductComponent } from './product/product.component'
+import { ProductComponent } from './product/product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MaterialExampleModule } from './material.module';
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -52,7 +55,10 @@ import { ProductComponent } from './product/product.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MaterialExampleModule
   ],
   //providers: [UsersService], //services
   bootstrap: [AppComponent]
