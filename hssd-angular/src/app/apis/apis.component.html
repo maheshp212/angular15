@@ -1,10 +1,12 @@
 <p>apis works!</p>
 
+<input id="table-filtering-search" class="form-control" type="text" placeholder="search here..." [(ngModel)]="searchStr" (input)="filter()" />
+
 <table border="1">
     <tr>
         <th> ID</th>
-        <th> Name</th>
-        <th> Email</th>
+        <th scope="col" sortable="name" (sort)="onSort($event)"> Name</th>
+        <th scope="col" sortable="email" (sort)="onSort($event)"> Email</th>
         <th> Gender</th>
         <th> Status</th>
         <th> Actions</th>

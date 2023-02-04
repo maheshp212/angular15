@@ -17,7 +17,7 @@ import { DollarPipe } from './dollar.pipe';
 import { ParamsPipe } from './params.pipe';
 import { HssdPipe } from './pipes/hssd.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
-import { ApisComponent } from './apis/apis.component';
+import { ApisComponent, NgbdSortableHeader } from './apis/apis.component';
 import { UsersService } from './users.service';
 import {HttpClientModule} from '@angular/common/http';
 import { Child1Component } from './child1/child1.component';
@@ -48,7 +48,8 @@ import { MaterialExampleModule } from './material.module';
     Child1Component,
     Child2Component,
     NotfoundComponent,
-    ProductComponent
+    ProductComponent,
+    NgbdSortableHeader
   ],
   imports: [ //modules
     BrowserModule,
