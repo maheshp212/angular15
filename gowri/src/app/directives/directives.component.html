@@ -1,0 +1,46 @@
+<p>directives works!</p>
+
+<!-- 
+    *ngIf
+    *ngFor
+    [(ngModel)]
+    [ngSwitch]
+    *ngSwitchCase
+    *ngSwitchDefault
+    [hidden]
+    [ngClass]
+    [ngStyle]
+    (click)
+    (mouseover)
+
+
+
+    *   -- conditions & loops
+    []  -- attributes
+    ()  -- events
+    [()] - two way data binding
+    #   -- local variables
+ -->
+
+ <div *ngIf="fname=='gowri'"> this is if</div>
+ <div [hidden]="fname=='gowri'"> this is hidden</div>
+
+
+ <div [ngSwitch]="fname">
+    <p *ngSwitchCase="'gowri'">  this is gowri</p>
+    <p *ngSwitchCase="'shankar'">  this is shankar</p>
+    <p *ngSwitchCase="'angular'">  this is angular</p>
+    <p *ngSwitchCase="'tech'">  this is tech</p>
+    <p *ngSwitchDefault>  this is default</p>
+ </div>
+
+ <span  *ngFor="let fruit of fruits"> {{fruit}}</span>
+ <h2  *ngFor="let x of fruits"> {{x}}</h2>
+
+ <ul>
+    <li *ngFor="let x of fruits"> {{x}}</li>
+ </ul>
+
+ <select>
+    <option *ngFor="let x of fruits">{{x}}</option>
+ </select>
