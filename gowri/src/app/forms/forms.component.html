@@ -1,0 +1,46 @@
+<p>forms works!</p>
+
+<pre>
+
+<form name="form"  #f=ngForm>
+    <label for="fname"> username</label>
+    
+    <input type="text" [(ngModel)]="fname" #firstName=ngModel placeholder="text" name="fname" id="fname" required="" minlength="5" maxlength="10"> {{fname}}
+    <div *ngIf="firstName.touched && firstName.hasError('required')"> pelase enter fname</div>
+    <input type="email" [(ngModel)]="email" #emailId=ngModel  placeholder="email" name="email">
+    
+    <input type="number" [(ngModel)]="age" #ageNumber=ngModel placeholder="number" name="age" min="40" max="80">
+
+    <input type="tel" [(ngModel)]="phone" #contact=ngModel  placeholder="phone" name="phone" pattern="[6789][0-9]{9}">
+    <!-- 9490791574 -->
+    
+    <input type="date" [(ngModel)]="date" #today=ngModel  name="date" min="2022-12-25" max="2023-05-21">
+    
+    <button [disabled]="f.invalid">Im a button</button>
+</form>
+
+
+Form states (boolean)
+valid  :: {{f.valid}}
+invalid :: {{f.invalid}}
+dirty :: {{f.dirty}}
+pristine :: {{f.pristine}}
+touched :: {{f.touched}}
+untouched :: {{f.untouched}}
+submitted :: {{f.submitted}}
+
+Form Field states (boolean)
+valid :: {{firstName.valid}}
+invalid:: {{firstName.invalid}}
+dirty :: {{firstName.dirty}}
+pristine :: {{firstName.pristine}}
+touched :: {{firstName.touched}}
+untouched :: {{firstName.untouched}}
+**hasError('minlength') :: {{firstName.hasError('minlength')}}
+**hasError('required') :: {{firstName.hasError('required')}}
+**hasError('maxlength') :: {{firstName.hasError('maxlength')}}
+**hasError('min') :: {{firstName.hasError('min')}}
+**hasError('max') :: {{firstName.hasError('max')}}
+**hasError('pattern') :: {{firstName.hasError('pattern')}}
+
+</pre>

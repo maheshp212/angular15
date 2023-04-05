@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FormsComponent } from './forms/forms.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -14,11 +16,13 @@ import { DirectivesComponent } from './directives/directives.component';
     HomeComponent,
     IntroComponent,
     VarComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    FormsComponent
   ],
   imports: [ // modules
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [], // services
   bootstrap: [AppComponent]

@@ -44,3 +44,70 @@
  <select>
     <option *ngFor="let x of fruits">{{x}}</option>
  </select>
+
+ <table border="1">
+   <tr>
+      <th>Fruits</th>
+   </tr>
+   <tr [hidden]="!fruits.length" *ngFor="let x of fruits">
+      <td> {{x}}</td>
+   </tr>
+   <tr *ngIf="!fruits.length">
+      <td> No Fruits Available</td>
+   </tr>
+</table>
+
+<div [ngClass]="{'error': (fname==='gowri'), 'success':fname!='gowri'}"> this is class</div>
+<div [ngStyle]="{'color': (fname==='gowri')?'red':'green' }"> this is style</div>
+
+<input type="text" [(ngModel)]="fname" /> <!--watcher -->
+
+<p (click)="callMe()"> this is click </p>
+<p (dblclick)="callMe()"> this is dblclick </p>
+<p (mouseover)="callMe()"> this is mouseover </p>
+<p (mouseout) ="callMe()"> this is out </p>
+<p (mouseenter) ="callMe()"> this is enter </p>
+<p (mouseleave) ="callMe()"> this is leave </p>
+<p (mousemove) ="callMe()"> this is move </p>
+<p (mousedown) ="callMe()"> this is down </p>
+<p (mouseup) ="callMe()"> this is up </p>
+<p (contextmenu) ="callMe()"> this is right click </p>
+
+<pre>
+    
+    <form (reset) ="callMe()" (submit) ="callMe()">
+        
+      
+    <input (click) ="callMe()" placeholder="click"/>
+   
+    <input (focus) ="callMe()" placeholder="focus"/>
+   
+    <input (blur) ="callMe()" placeholder="blur"/>
+   
+    <input (keydown) ="callMe()" placeholder="down"/>
+   
+    <input (keyup) ="callMe()" placeholder="up"/>
+   
+    <input (keypress)="callMe()" placeholder="press"/>
+   
+    <input (change)="callMe()" placeholder="change"/>
+   
+    <input (input)="callMe()" placeholder="input"/>
+   
+    <input (copy)="callMe()" placeholder="copy"/>
+   
+    <input (cut)="callMe()" placeholder="cut"/>
+   
+    <input (paste)="callMe()" placeholder="paste"/>
+   
+    <input type="text" (invalid)="callMe()" required minlength="5" maxlength="10" placeholder="invalid">
+   
+    <input type="search" (search)="callMe()" placeholder="search">
+   
+    <input type="text" (select)="callMe()" value="Hello world!" placeholder=" select all">
+   
+    <input type="reset">
+   
+    <input type="submit">
+</form>
+</pre>

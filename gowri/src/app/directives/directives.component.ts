@@ -7,12 +7,20 @@ import { Component } from '@angular/core';
 })
 export class DirectivesComponent {
 
-  fname:string = 'gowrii';
+  fname:string = 'gowri';
   age:number = 34;
   gender:boolean = true;
   interest:null = null;
-  fruits:string[] = ['kiwi', 'melon', 'berry'];
+  //fruits:string[] = ['kiwi', 'melon', 'berry'];
+  fruits:string[] = [];
   user:any = {name: 'angular' ,exp:5};
   undf:any;
+  counter:number = 0
+
+  
+  callMe(){
+    console.log('event triggered :: ' + this.counter);
+    this.counter++
+  }
 
 }
