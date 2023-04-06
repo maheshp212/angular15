@@ -1,0 +1,13 @@
+<p>reactive-forms works!</p>
+<pre>
+<form name="form" [formGroup]="regFormGroup">
+    <input type="text" name="fname" formControlName="fname"/>
+
+    <div *ngIf="this.regFormGroup.controls['fname'].hasError('required')"> this is required </div>
+    <input type="text" name="lname" formControlName="lname"/>
+    <input type="text" name="age" formControlName="age"/>
+    <input type="text" name="phone" formControlName="phone"/>
+</form>
+
+{{this.regFormGroup.controls['fname'].hasError('required')}}
+</pre>

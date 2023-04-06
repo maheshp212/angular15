@@ -8,7 +8,9 @@ import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -17,12 +19,15 @@ import { FormsModule } from '@angular/forms';
     IntroComponent,
     VarComponent,
     DirectivesComponent,
-    FormsComponent
+    FormsComponent,
+    ObjFormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [ // modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [], // services
   bootstrap: [AppComponent]

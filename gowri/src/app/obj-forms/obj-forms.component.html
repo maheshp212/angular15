@@ -1,3 +1,4 @@
+<p>obj-forms works!</p>
 <p>forms works!</p>
 
 <pre>
@@ -5,7 +6,7 @@
 <form name="form"  #f=ngForm (submit)="f.valid && takeValues()">
     <label for="fname"> username</label>
     
-    <input type="text" [(ngModel)]="fname" #firstName=ngModel placeholder="text" name="fname" id="fname" required="" minlength="5" maxlength="10"> {{fname}}
+    <input type="text" [(ngModel)]="user.firstName" #firstName=ngModel placeholder="text" name="fname" id="fname" required="" minlength="5" maxlength="10"> {{user.firstName}}
     <!-- <div class="error" *ngIf="firstName.dirty && firstName.invalid"> pelase enter a valid value</div> -->
     <!-- <div class="error" *ngIf="firstName.dirty && firstName.hasError('required')"> This is a mandatroy field</div>
     <div class="error" *ngIf="firstName.dirty && firstName.hasError('minlength')"> pelase enter a min 5 chars</div>
@@ -23,14 +24,14 @@
     
     
     
-    <input type="email" [(ngModel)]="email" #emailId=ngModel  placeholder="email" name="email">
+    <input type="email" [(ngModel)]="user.email" #email=ngModel  placeholder="email" name="email">
     
-    <input type="number" [(ngModel)]="age" #ageNumber=ngModel placeholder="number" name="age" min="40" max="80">
+    <input type="number" [(ngModel)]="user.age" #age=ngModel placeholder="number" name="age" min="40" max="80">
 
-    <input type="tel" [(ngModel)]="phone" #contact=ngModel  placeholder="phone" name="phone" pattern="[6789][0-9]{9}">
+    <input type="tel" [(ngModel)]="user.phone" #phone=ngModel  placeholder="phone" name="phone" pattern="[6789][0-9]{9}">
     <!-- 9490791574 -->
     
-    <input type="date" [(ngModel)]="date" #today=ngModel  name="date" min="2022-12-25" max="2023-05-21">
+    <input type="date" [(ngModel)]="user.date" #date=ngModel  name="date" min="2022-12-25" max="2023-05-21">
     <!-- [disabled]="f.invalid" -->
     <button >Im a button</button>
 </form>
