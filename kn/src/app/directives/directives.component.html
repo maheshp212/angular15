@@ -1,0 +1,61 @@
+<p>directives works!</p>
+
+<!-- 
+    *ngIf
+[hidden]
+*ngFor
+[(ngModel)]
+[ngSwitch]
+*ngSwitchCase
+*ngSwitchDefualt
+[ngClass]
+[ngStyle]
+
+
+(click)
+(mouseover)
+
+*    --- conditions & loops
+[]   --- attributes
+()   --- events
+[()] -- two way data binding -->
+fname :: {{fname}}
+
+<p *ngIf="fname == 'angular'"> this is if </p>
+
+<p [hidden]="fname == 'angular'"> this is hidden </p>
+
+<p [ngSwitch]="fname">   
+    <span *ngSwitchCase="'angular'"> this is angular</span>
+    <span *ngSwitchCase="'react'"> this is react</span>
+    <span *ngSwitchCase="'vue'"> this is vue</span>
+    <span *ngSwitchDefault> this is default JS</span>
+</p>
+
+<h1 *ngFor="let fruit of fruits"> {{fruit}}</h1>
+
+<select>
+    <option *ngFor="let fruit of fruits"> {{fruit}}</option>
+</select>
+
+
+<div [ngClass]="{'dynamic': fname== 'angular'}"> this is ng class</div>
+<div [ngStyle]="{'color': fname== 'angular'?'tomato' : 'skyblue'}"> this is ng style</div>
+
+<input type="text" [(ngModel)]="fname" /> {{fname}}
+
+<p (click)="callMe()"> this is click</p>
+<p (dblclick)="callMe()"> this is DBLclick</p>
+<p (mouseenter)="callMe()"> this is enter</p>
+
+<pre>
+    <form>
+        <input type="text" (click)="callMe()" placeholder="click">
+        
+        <input type="text" (focus)="callMe()" placeholder="focus">
+        
+        <input type="text" (blur)="callMe()" placeholder="blur">
+        
+        <button> submit the form</button>
+    </form>
+</pre>
