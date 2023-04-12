@@ -1,0 +1,40 @@
+header{
+    background-color: #68A691;
+    h1{
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+}
+nav{
+    display: flex;
+    background-color: #BFD3C1;
+    padding: 15px;
+
+    .nav-item{
+        a{
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        a:hover{
+            color: white;
+            background-color: #68A691;
+            text-decoration: underline;
+            border-radius:5px ;
+        }
+    }
+}
+
+main{
+    background-color: #adbaae12;
+    min-height: 660px;
+    padding: 10px;
+}
+footer{
+    background-color: #68A691;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
