@@ -39,7 +39,7 @@ fname :: {{fname}}
 </select>
 
 
-<div [ngClass]="{'dynamic': fname== 'angular'}"> this is ng class</div>
+<div [ngClass]="{'success': fname== 'angular', 'error': fname!= 'angular' }"> this is ng class</div>
 <div [ngStyle]="{'color': fname== 'angular'?'tomato' : 'skyblue'}"> this is ng style</div>
 
 <input type="text" [(ngModel)]="fname" /> {{fname}}

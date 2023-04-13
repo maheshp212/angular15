@@ -8,6 +8,10 @@ import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsModule } from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { UsericonPipe } from './usericon.pipe';
 
 @NgModule({
   declarations: [ // component, directive , pipe 
@@ -15,7 +19,11 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     IntroComponent,
     VarComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    UsericonPipe
   ],
   imports: [ // module
     BrowserModule,

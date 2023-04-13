@@ -14,5 +14,9 @@ export class DirectivesComponent {
   callMe(){
     console.log('callMe Invoked :: ' + this.counter);
     this.counter++;
+
+    this.fruits.forEach((fruit:any) =>{
+      console.log(fruit)
+    })
   }
 }

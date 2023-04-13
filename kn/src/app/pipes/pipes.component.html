@@ -1,0 +1,66 @@
+<p>pipes works!</p>
+
+
+pipes -> formatting the data 
+
+<pre>
+    {{fname}}
+    {{fname | lowercase}}
+    {{fname | uppercase}}
+    {{fname | slice:2:5}}
+    {{fname | number}} **
+    {{fname | usericon}} 
+
+    {{age}}
+    {{age | number}}
+    {{age | number:'5.5'}}
+    {{age | number:'5.1-2'}}
+    
+    {{age | hexa}}
+    {{15 | hexa}}
+    {{14 | hexa}}
+    {{255 | hexa}}
+
+    {{5 | params:3:5:2:7:8}}
+   
+   
+    {{age | currency}}
+    {{age | currency:'INR'}}
+    {{age | currency:'INR '}}
+    {{age | currency:'Rs. '}}
+    {{age | currency:'&#8377; '}}
+    
+    {{today}}
+    {{today | date}}
+    {{today | date:'dd-MM-yy'}}
+    
+    {{user}}
+    {{user | json}}
+
+<!-- 
+fist letter capital for every word
+angular tech
+Angular Tech
+{{'angular tech' | fc}} 
+
+
+
+16 digit debit card number
+123456891234567
+XXXX XXXX XX23 4567
+{{123456891234567 | dbc}}
+
+
+
+dollar to ruppee conversion
+{{2 |dtr}}
+
+
+sqrt
+{{9 | sqrt}}
+
+
+any power
+2*3
+{{2 | power:3}} -->
+</pre>
