@@ -12,6 +12,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { UsericonPipe } from './usericon.pipe';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [ // component, directive , pipe 
@@ -23,7 +24,8 @@ import { UsericonPipe } from './usericon.pipe';
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    UsericonPipe
+    UsericonPipe,
+    LifeCycleComponent
   ],
   imports: [ // module
     BrowserModule,

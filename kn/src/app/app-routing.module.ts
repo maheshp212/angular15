@@ -5,6 +5,7 @@ import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'varrr', component:VarComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'pipes', component:PipesComponent},
+  {path:'life-cycle', component:LifeCycleComponent},
 ];
 
 @NgModule({
