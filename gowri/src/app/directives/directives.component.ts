@@ -11,8 +11,8 @@ export class DirectivesComponent {
   age:number = 34;
   gender:boolean = true;
   interest:null = null;
-  //fruits:string[] = ['kiwi', 'melon', 'berry'];
-  fruits:string[] = [];
+  fruits:string[] = ['kiwi', 'melon', 'berry'];
+  // fruits:string[] = [];
   user:any = {name: 'angular' ,exp:5};
   undf:any;
   counter:number = 0

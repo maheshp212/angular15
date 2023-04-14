@@ -11,6 +11,9 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -21,7 +24,10 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     DirectivesComponent,
     FormsComponent,
     ObjFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe
   ],
   imports: [ // modules
     BrowserModule,

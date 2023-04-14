@@ -22,8 +22,26 @@
     #   -- local variables
  -->
 
- <div *ngIf="fname=='gowri'"> this is if</div>
+ <div *ngIf="fname=='gowri' else showNgTemplateContent"> this is if</div>
+ <ng-template #showNgTemplateContent> this is else </ng-template>
+
+
  <div [hidden]="fname=='gowri'"> this is hidden</div>
+
+<!-- <> </> -- fragment (react) -->
+@@@@@@@@@@@@@@@@@@@@@@@
+ <ng-container *ngIf="fruits"> <!-- it will not create any element in the dom-->
+   <div *ngFor="let info of fruits">
+     {{ info }}
+   </div>
+ </ng-container>
+######################
+ <div *ngIf="fruits"> 
+   <div *ngFor="let info of fruits">
+     {{ info }}
+   </div>
+</div>
+
 
 
  <div [ngSwitch]="fname">
