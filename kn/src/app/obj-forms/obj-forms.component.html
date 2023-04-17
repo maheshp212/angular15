@@ -1,0 +1,45 @@
+<p>obj-forms works!</p>
+<p>forms works!</p>
+<pre>
+
+
+<form name="form" #f="ngForm" (submit)="f.valid && login()">
+
+    <input type="text"  name="fname" placeholder="fname" [(ngModel)]="user.firstName" #firstName="ngModel" required minlength="5" maxlength="10"> {{user.firstName}}
+
+    <!-- <div style="color:red" *ngIf="f.submitted && firstName.invalid"> Please enter a valid value</div> -->
+    <!-- <div style="color:red" *ngIf="firstName.dirty && firstName.hasError('minlength')"> Please enter a min 5 chars</div> -->
+    <div style="color:red" *ngIf="firstName.touched && firstName.hasError('required')"> this is a mandatory field</div>
+    <input type="number"  name="age" placeholder="age" [(ngModel)]="user.age" #age="ngModel" min="10" max="50">
+
+    <input type="date"  name="date" [(ngModel)]="user.date" #date="ngModel" min="2022-12-25"  max="2023-05-22">
+
+    <input type="tel"  name="phone" placeholder="phone" [(ngModel)]="user.phone" #phone="ngModel" pattern="[6789][0-9]{9}">
+    <button>SUbmit</button>
+</form>
+
+
+Form States
+- valid :: {{f.valid}}
+- invalid:: {{f.invalid}}
+- dirty:: {{f.dirty}}
+- pristine:: {{f.pristine}}
+- touched:: {{f.touched}}
+- untouched:: {{f.untouched}}
+- submitted:: {{f.submitted}}
+
+
+Form Field States
+- valid :: {{firstName.valid}}
+- invalid :: {{firstName.invalid}}
+- dirty :: {{firstName.dirty}}
+- pristine:: {{firstName.pristine}}
+- touched :: {{firstName.touched}}
+- untouched :: {{firstName.untouched}}
+- hasError('required'); :: {{firstName.hasError('required')}}
+- hasError('minlength'); :: {{firstName.hasError('minlength')}}
+- hasError('maxlength'); :: {{firstName.hasError('maxlength')}}
+- hasError('min');
+- hasError('max');
+- hasError('pattern');
+</pre>

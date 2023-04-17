@@ -6,6 +6,8 @@ import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path:'directives', component:DirectivesComponent},
   {path:'pipes', component:PipesComponent},
   {path:'life-cycle', component:LifeCycleComponent},
+  {path:'forms', component:FormsComponent},
+  {path:'obj-forms', component:ObjFormsComponent},
 ];
 
 @NgModule({
