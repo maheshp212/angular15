@@ -14,6 +14,11 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { Cmp1Component } from './cmp1/cmp1.component';
+import { CustomComponent } from './custom/custom.component';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -27,7 +32,12 @@ import { ParamsPipe } from './params.pipe';
     ReactiveFormsComponent,
     PipesComponent,
     HexaPipe,
-    ParamsPipe
+    ParamsPipe,
+    LifeCycleComponent,
+    Cmp1Component,
+    CustomComponent,
+    AttrDirective,
+    ClassDirective
   ],
   imports: [ // modules
     BrowserModule,

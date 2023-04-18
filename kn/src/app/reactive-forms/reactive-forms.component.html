@@ -1,0 +1,44 @@
+<p>reactive-forms works!</p>
+
+<pre>
+
+
+<form name="form" [formGroup]="regFormGroup" (submit)="reg()">
+
+    <input type="text"  name="fname" placeholder="fname"  formControlName="fname">
+
+    <div *ngIf="isSubmitted && fc['fname'].invalid" style="color:red"> please enter a valid value </div>
+
+    <input type="text"  name="fname" placeholder="fname" formControlName="lname">
+
+    <input type="number"  name="age" placeholder="age" formControlName="age">
+
+    <input type="tel"  name="phone" placeholder="phone" formControlName="phone">
+    <button>SUbmit</button>
+</form>
+
+
+ Form States
+- valid :: {{regFormGroup.valid}}
+ invalid:: {{regFormGroup.invalid}}
+- dirty:: {{regFormGroup.dirty}}
+- pristine:: {{regFormGroup.pristine}}
+- touched:: {{regFormGroup.touched}}
+- untouched:: {{regFormGroup.untouched}}
+<!-- - submitted:: {{regFormGroup.submitted}} -->
+
+
+Form Field States
+- valid :: {{regFormGroup.controls['fname'].valid}}
+- invalid :: {{fc['fname'].invalid}}
+- dirty :: {{fc['fname'].dirty}}
+- pristine:: {{fc['fname'].pristine}}
+- touched :: {{fc['fname'].touched}}
+- untouched :: {{fc['fname'].untouched}}
+- hasError('required'); :: {{fc['fname'].hasError('required')}}
+- hasError('minlength'); :: {{fc['fname'].hasError('minlength')}}
+- hasError('maxlength'); :: {{fc['fname'].hasError('maxlength')}}
+- hasError('min');
+- hasError('max');
+- hasError('pattern'); 
+</pre>

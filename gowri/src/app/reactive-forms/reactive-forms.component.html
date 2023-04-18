@@ -1,13 +1,57 @@
 <p>reactive-forms works!</p>
 <pre>
-<form name="form" [formGroup]="regFormGroup">
+<form name="form" [formGroup]="regFormGroup" (submit)="reg()">
     <input type="text" name="fname" formControlName="fname"/>
-
-    <div *ngIf="this.regFormGroup.controls['fname'].hasError('required')"> this is required </div>
+    <div *ngIf="this.regFormGroup.controls['fname'].dirty && this.regFormGroup.controls['fname'].hasError('required')"> this is required </div>
+    <div *ngIf="fc['fname'].dirty && fc['fname'].hasError('minlength')"> we need min 5 charcs </div>
+    <div *ngIf="isSubmitted && fc['fname'].hasError('maxlength')"> we need max 10 charcs </div>
+    
+    
     <input type="text" name="lname" formControlName="lname"/>
     <input type="text" name="age" formControlName="age"/>
     <input type="text" name="phone" formControlName="phone"/>
+    <button> Register</button>
 </form>
 
 {{this.regFormGroup.controls['fname'].hasError('required')}}
+
+
+Form states (boolean)
+valid  :: {{regFormGroup.valid}}
+invalid :: {{regFormGroup.invalid}}
+dirty :: {{regFormGroup.dirty}}
+pristine :: {{regFormGroup.pristine}}
+touched :: {{regFormGroup.touched}}
+untouched :: {{regFormGroup.untouched}}
+<!-- submitted :: {{regFormGroup.submit}} -->
+
+Form Field states (boolean)
+valid :: {{this.regFormGroup.controls['fname'].valid}}
+invalid:: {{this.regFormGroup.controls['fname'].invalid}}
+dirty :: {{this.regFormGroup.controls['fname'].dirty}}
+pristine :: {{this.regFormGroup.controls['fname'].pristine}}
+touched :: {{this.regFormGroup.controls['fname'].touched}}
+untouched :: {{this.regFormGroup.controls['fname'].untouched}}
+**hasError('minlength') :: {{this.regFormGroup.controls['fname'].hasError('minlength')}}
+**hasError('required') :: {{this.regFormGroup.controls['fname'].hasError('required')}}
+**hasError('maxlength') :: {{this.regFormGroup.controls['fname'].hasError('maxlength')}}
+**hasError('min') :: {{this.regFormGroup.controls['fname'].hasError('min')}}
+**hasError('max') :: {{this.regFormGroup.controls['fname'].hasError('max')}}
+**hasError('pattern') :: {{this.regFormGroup.controls['fname'].hasError('pattern')}}
+
+
+
+Form Field states (boolean) with FC
+valid :: {{fc['fname'].valid}}
+invalid:: {{fc['fname'].invalid}}
+dirty :: {{fc['fname'].dirty}}
+pristine :: {{fc['fname'].pristine}}
+touched :: {{fc['fname'].touched}}
+untouched :: {{fc['fname'].untouched}}
+**hasError('minlength') :: {{fc['fname'].hasError('minlength')}}
+**hasError('required') :: {{fc['fname'].hasError('required')}}
+**hasError('maxlength') :: {{fc['fname'].hasError('maxlength')}}
+**hasError('min') :: {{fc['fname'].hasError('min')}}
+**hasError('max') :: {{fc['fname'].hasError('max')}}
+**hasError('pattern') :: {{fc['fname'].hasError('pattern')}}
 </pre>

@@ -1,1 +1,45 @@
 <p>intro works!</p>
+<!-- <app-cmp1></app-cmp1> -->
+<app-custom salute="Hi SIR " name="{{fname}}"></app-custom>
+
+
+
+<!-- passing one parameter as a string and another parameter as a variable-->
+<app-custom [salute]="'hello'" [name]="fname" [all]="obj" (fetchName)="catchName($event)"></app-custom> 
+
+<!-- 
+  INput   file flow:::
+intro.comp.ts
+intro.comp.html
+custome.comp.ts
+custom.comp.html
+ -->
+
+
+<!-- 
+    output   file flow:::
+ intro.comp.ts
+ intro.comp.html
+ custome.comp.ts
+ custom.comp.html
+ onbtnclick
+ custome.comp.ts
+ intro.comp.html
+ intro.comp.ts
+ 
+ -->
+
+
+ <span [appAttr]="customLogic" [msg]="'hello'" [fname]="'gowri'" (sendData)="catchName($event)"> thisi s custom directive</span>
+
+<!-- 
+output   file flow:::
+ intro.comp.ts
+ intro.comp.html
+ ATTR.dir.ts
+ click on attribute
+ ATTR.dir.ts -> hostListener -> output emitter -> intro.compo.html-> intro.comp.ts ->console.log('end')  
+ 
+ -->
+<div class="gowriClass"> this is a class attribute</div>
+

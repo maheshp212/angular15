@@ -22,5 +22,8 @@ export class DirectivesComponent {
     console.log('event triggered :: ' + this.counter);
     this.counter++
   }
+  callMe2(e:any){
+  console.log(e)
+}
 
 }
