@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { Cmp1Component } from './cmp1/cmp1.component';
 import { CustomComponent } from './custom/custom.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { ApisComponent } from './apis/apis.component';
+import { UsersService } from './users.service';
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -37,15 +40,17 @@ import { ClassDirective } from './class.directive';
     Cmp1Component,
     CustomComponent,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    ApisComponent
   ],
   imports: [ // modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [], // services
+  providers: [UsersService], // services
   bootstrap: [AppComponent]
 })
 export class AppModule { }
