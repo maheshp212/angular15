@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +22,8 @@ import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
 import { ApisComponent } from './apis/apis.component';
 import { UsersService } from './users.service';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { UserAuthInterceptor } from './user-auth.interceptor';
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -41,7 +43,8 @@ import { UsersService } from './users.service';
     CustomComponent,
     AttrDirective,
     ClassDirective,
-    ApisComponent
+    ApisComponent,
+    NotFoundComponent
   ],
   imports: [ // modules
     BrowserModule,
@@ -50,7 +53,8 @@ import { UsersService } from './users.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UsersService], // services
+  providers: [UsersService,
+    {provide: HTTP_INTERCEPTORS, useClass: UserAuthInterceptor, multi:true}], // services
   bootstrap: [AppComponent]
 })
 export class AppModule { }

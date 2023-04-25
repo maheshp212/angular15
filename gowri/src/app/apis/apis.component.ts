@@ -9,6 +9,7 @@ import { UsersService } from '../users.service';
 })
 export class ApisComponent implements OnInit{
  usersList:any
+ userInfo:any;
   constructor(private user:UsersService){}
 
   ngOnInit(): void {
@@ -26,4 +27,37 @@ export class ApisComponent implements OnInit{
     })
   }
 
+
+  createUser(){
+    this.user.createUser().subscribe((res)=>{
+      this.userInfo = res;
+      this.getUsersList();
+    }, (err)=>{
+      console.log(err);
+    })
+  }
+
+  viewUser(id:number){
+    this.user.getUser(id).subscribe((res)=>{
+      this.userInfo = res;
+    }, (err)=>{
+      console.log(err);
+    })
+  }
+  editUser(id:number){
+    this.user.editUser(id).subscribe((res)=>{
+      this.userInfo = res;
+      this.getUsersList();
+    }, (err)=>{
+      console.log(err);
+    })
+  }
+  deleteUser(id:number){
+    this.user.deleteUser(id).subscribe((res)=>{
+      this.userInfo = res;
+      this.getUsersList();
+    }, (err)=>{
+      console.log(err);
+    })
+  }
 }

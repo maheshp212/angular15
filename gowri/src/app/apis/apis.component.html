@@ -7,6 +7,7 @@
         <th>Email</th>
         <th>Gender</th>
         <th>Status</th>
+        <th>Actions</th>
     </tr>
     <tr *ngFor="let user of usersList">
         <td>{{user.id}}</td>
@@ -14,5 +15,16 @@
         <td>{{user.email}}</td>
         <td>{{user.gender}}</td>
         <td>{{user.status}}</td>
+        <td>
+            <div (click)="viewUser(user.id)">View</div>
+            <p  (click)="editUser(user.id)">Edit</p>
+            <button  (click)="deleteUser(user.id)"> Delete</button>
+        </td>
     </tr>
 </table>
+
+<pre>
+    <button (click)="createUser()"> Create </button>
+
+    {{userInfo | json}}
+</pre>
