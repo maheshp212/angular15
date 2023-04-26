@@ -16,6 +16,8 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { CustomComponent } from './custom/custom.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [ // component, directive , pipe 
@@ -31,7 +33,9 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     LifeCycleComponent,
     FormsComponent,
     ObjFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    CustomComponent,
+    NotFoundComponent
   ],
   imports: [ // module
     BrowserModule,

@@ -9,10 +9,11 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
-  {path:'intro', component:IntroComponent},
+  {path:'', component:HomeComponent},
+  {path:'intro/:id', component:IntroComponent},
   {path:'varrr', component:VarComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'pipes', component:PipesComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'forms', component:FormsComponent},
   {path:'obj-forms', component:ObjFormsComponent},
   {path:'reactive-forms', component:ReactiveFormsComponent},
+  {path:'**', component:NotFoundComponent},
 ];
 
 @NgModule({
