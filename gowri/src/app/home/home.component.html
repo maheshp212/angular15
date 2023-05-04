@@ -1,1 +1,98 @@
 <p>home works!</p>
+
+<div style="width:60%">
+<ngb-carousel
+	*ngIf="images"
+	[showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators"
+>
+	<ng-template ngbSlide *ngFor="let image of images">
+		<div class="picsum-img-wrapper">
+			<img [src]="image" alt="Random slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>No mouse navigation</h3>
+			<p>This carousel hides navigation arrows and indicators.</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
+
+<hr />
+
+<div class="btn-group" role="group" aria-label="Carousel toggle controls">
+	<button type="button" (click)="showNavigationArrows = !showNavigationArrows" class="btn btn-outline-dark btn-sm">
+		Toggle navigation arrows
+	</button>
+	<button
+		type="button"
+		(click)="showNavigationIndicators = !showNavigationIndicators"
+		class="btn btn-outline-dark btn-sm"
+	>
+		Toggle navigation indicators
+	</button>
+</div>
+</div>
+
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Country</th>
+			<th scope="col">Area</th>
+			<th scope="col">Population</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let country of countries; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+				<img
+					[src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag"
+					class="me-2"
+					style="width: 20px"
+				/>
+				{{ country.name }}
+			</td>
+			<td>{{ country.area | number }}</td>
+			<td>{{ country.population | number }}</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="mb-3">
+				<label for="dateOfBirth">Date of birth</label>
+				<div class="input-group">
+					<input
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="yyyy-mm-dd"
+						name="dp"
+						ngbDatepicker
+						#dp="ngbDatepicker"
+					/>
+					<button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr />
+
+<pre>{{ closeResult }}</pre>

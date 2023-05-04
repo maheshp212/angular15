@@ -24,6 +24,10 @@ import { ApisComponent } from './apis/apis.component';
 import { UsersService } from './users.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserAuthInterceptor } from './user-auth.interceptor';
+import { NgbModule,NgbCarouselModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from './material.module';
+
 
 @NgModule({
   declarations: [ // components / pipes / directives
@@ -51,7 +55,12 @@ import { UserAuthInterceptor } from './user-auth.interceptor';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    NgbCarouselModule,
+    NgbDatepickerModule,
+    BrowserAnimationsModule,
+    MaterialExampleModule
   ],
   providers: [UsersService,
     {provide: HTTP_INTERCEPTORS, useClass: UserAuthInterceptor, multi:true}], // services
